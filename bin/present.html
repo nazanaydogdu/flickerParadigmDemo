@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<TITLE>Example use of present</TITLE>
+</HEAD>
+<BODY>
+	<APPLET CODE="present" WIDTH="674" HEIGHT="644">
+		<PARAM NAME="frames" VALUE="2">
+		<!-- Number of images -->
+		<PARAM NAME="stop-at" VALUE="3">
+		<!-- Number of frames+ISIs to show before halting,
+
+in this example we want to stop after displaying the last image, so we need to set this to 3 so that we can accommodate two images and one ISI. If set to 4, the last image would be shown and then replaced with gray and then the app would halt. -->
+
+		<!-- If you don't want an ISI inserted between each image, leave out the next three lines -->
+		<PARAM NAME=isi-color-r VALUE=128>
+		<PARAM NAME=isi-color-g VALUE=128>
+		<PARAM NAME=isi-color-b VALUE=128>
+
+		<!-- Next three lines describe the first "frame" -->
+		<PARAM NAME=img1 VALUE=p1.jpg>
+		<!-- Name of JPG, surround with "" if it has spaces -->
+		<PARAM NAME=delay1 VALUE=2000>
+		<!-- How long to dispaly JPG, in ms -->
+		<PARAM NAME=isi1 VALUE=1000>
+		<!-- How long the ISI is after image is shown -->
+
+		<!-- Next three lines describe the next frame -->
+		<PARAM NAME=img2 VALUE=p1.t.jpg>
+		<PARAM NAME=delay2 VALUE=2000>
+		<PARAM NAME=isi2 VALUE=1000>
+
+	</APPLET>
+</BODY>
+</HTML>
